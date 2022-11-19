@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="20221119_220758" timestamp="2022-11-19T22:07:59" time="28.312" tests="16" errors="1">
+  <testsuite id="1" name="MySeconedProject" package="MySeconedProject" hostname="DESKTOP-P8C2QDG" timestamp="2022-11-19T22:08:02" time="23.627" tests="16" errors="1">
+    <properties>
+      <property name="Run From" value="DESKTOP-P8C2QDG" />
+      <property name="Run OS" value="amd64 Windows 10 10.0" />
+      <property name="Run User" value="Windows 10" />
+      <property name="Iteration" value="1 of 1" />
+      <property name="Script" value="MySeconedProject.xlsx" />
+      <property name="MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log" value="C:\Projects\MySeconedProject\output\20221119_220758\logs\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log" />
+      <property name="Logs" value="C:\Projects\MySeconedProject\output\20221119_220758\logs\nexial-20221119_220758.log" />
+      <property name="Data File" value="MySeconedProject.data.xlsx" />
+      <property name="DataSheet(s)" value="#default" />
+      <property name="runtime args" value="-script C:\Projects\MySeconedProject\artifact\script\MySeconedProject.xlsx" />
+    </properties>
+    <testcase id="Base Url" name="Base Url" classname="Scenario" timestamp="2022-11-19T22:08:03" time="22.202">
+      <failure type="failure found in test activity" message="1 of 16 FAILED. Check C:\Projects\MySeconedProject\output\20221119_220758\MySeconedProject.20221119_220802.001.xlsx for execution result, C:\Projects\MySeconedProject\output\20221119_220758\logs\nexial-20221119_220758.log for execution logs" />
+      <system-out>Total : 16
+Passed: 15
+Failed: 1
+Output: C:\Projects\MySeconedProject\output\20221119_220758\MySeconedProject.20221119_220802.001.xlsx
+Logs  : C:\Projects\MySeconedProject\output\20221119_220758\logs\nexial-20221119_220758.log</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,376 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <script>
+        var loadErrorFound = false;
+        function externalResourceNotFound() {
+            if (!loadErrorFound) {
+                window.alert("Unable to load one or more external web resources needed to display this page.\n\n" +
+                             "Please check/adjust your Internet access and reload this page again.\n\n" +
+                             "Thank you.");
+                loadErrorFound = true;
+            }
+            return false;
+        }
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" onerror="externalResourceNotFound()"/>
+    <link rel="stylesheet" href="https://nexiality.github.io/documentation/assets/report/execution_summary.css" onerror="externalResourceNotFound()"/>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js" onerror="externalResourceNotFound()"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" onerror="externalResourceNotFound()"></script>
+    <script src="https://nexiality.github.io/documentation/assets/report/execution_summary.js" onerror="externalResourceNotFound()"></script>
+    <script src="https://nexiality.github.io/documentation/assets/report/execution_output.js" onerror="externalResourceNotFound()"></script>
+</head>
+<body>
+<div class="title">
+    Execution Summary for <span>20221119_220758</span>
+</div>
+
+<div class="result-controls">
+    <i class="fas fa-toggle-on on" id="script-toggle" onclick="toggleScript(this)" title="toggle the display of only scripts"><span>Scripts</span></i>
+    <i class="fas fa-toggle-on on" id="iteration-toggle" onclick="toggleIteration(this)" title="toggle the display of iterations"><span>Iterations</span></i>
+    <i class="fas fa-toggle-on on" id="scenario-toggle" onclick="toggleScenario(this)" title="toggle the display of scenarios"><span>Scenarios</span></i>
+    <i class="fas fa-toggle-on on" id="activity-toggle" onclick="toggleActivity(this)" title="toggle the display of activities"><span>Activities</span></i>
+    <i class="fas fa-toggle-on on" id="reference-toggle" onclick="toggleRefs(this);" title="toggle the display of script/scenario references"><span>References</span></i>
+    <i class="fas fa-toggle-on on" id="timing-toggle" onclick="toggleTimings(this);" title="toggle the display of execution time"><span>Timing</span></i>
+    <i class="fas fa-toggle-on on" id="passfail-toggle" onclick="togglePassFail(this);" title="toggle the display of PASS/FAIL"><span>PASS/FAIL</span></i>
+    &nbsp;|&nbsp;&nbsp;
+    <i class="fas fa-exclamation-circle off" id="failure-toggle" onclick="collapsePassRows(this);"><span>Failures</span></i>
+    <i class="fas fa-check-circle on" id="all-toggle" onclick="showPassRows(this);"><span>All Results</span></i>
+    &nbsp;|&nbsp;&nbsp;
+    <i class="fas fa-compress on" id="collapse-toggle" onclick="toggleExpansion(this)" title="collapse/expand all sections"><span>Collapse/Expand All</span></i>
+</div>
+
+
+
+<div class="execMeta canHide">
+    <div class="showhide" target="execMeta">
+        <i class="fas fa-minus-square" onclick="hideSection(this)" title="minimize this section"></i>
+        <i class="fas fa-plus-square" onclick="showSection(this)" title="restore this section"></i>
+    </div>
+
+    <div id="execMeta" class="parent">
+        <div class="meta">
+            <table class="execMeta" cellpadding="0" cellspacing="0" style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td class="section-header section-env" width="10%"><i class="fas fa-laptop-code"></i></td>
+                        <td class="section-detail detail-env">
+                            <div class="execValue">
+                                <div class="execLabel">run from</div>
+                                <div class="content" style="text-align:left; margin-top:-5px;">DESKTOP-P8C2QDG (amd64 Windows 10 10.0)
+</div>
+                            </div>
+                            <div class="execValue">
+                                <div class="execLabel">run user</div>
+                                <div class="content">Windows 10
+</div>
+                            </div>
+                            <div class="execValue">
+                                <div class="execLabel">nexial version</div>
+                                <div class="content">nexial-core dev_1490</div>
+                            </div>
+                            <div class="execValue">
+                                <div class="execLabel">java version</div>
+                                <div class="content">1.8.0_321</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" class="section-header section-time"><i class="fas fa-clock"></i></td>
+                        <td class="section-detail detail-time">
+                            <div class="execValue">
+                                <div class="execLabel">starts on</div>
+                                <div class="content">11/19/2022 22:07:59
+</div>
+                            </div>
+                            <div class="execValue">
+                                <div class="execLabel">ends on</div>
+                                <div class="content">11/19/2022 22:08:28
+</div>
+                            </div>
+                            <div class="execValue">
+                                <div class="execLabel">duration</div>
+                                <div class="content">00:00:28.312
+</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="section-header section-exec"><i class="fas fa-cogs"></i></td>
+                        <td class="section-detail detail-exec">
+                            <div class="execValue">
+                                <div class="execLabel">Scenario Passed</div>
+                                <div class="content">0 / 1
+</div>
+                            </div>
+                            <div class="execValue">
+                                <div class="execLabel">Total Steps</div>
+                                <div class="content">   16
+</div>
+                            </div>
+                            <div class="execValue">
+                                <div class="execLabel">Executed Steps</div>
+                                <div class="content">16 (100.00%)
+</div>
+                            </div>
+                            <div class="execValue execValuePass">
+                                <div class="execLabel">Passed</div>
+                                <div class="content">15 (93.75%)
+</div>
+                            </div>
+                            <div class="execValue execValueFail">
+                                <div class="execLabel">Failed</div>
+                                <div class="content">1 (6.25%)
+</div>
+                            </div>
+                            <div class="execValue execValueSkipped">
+                                <div class="execLabel">Skipped</div>
+                                <div class="content">0 (0.00%)
+</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="section-header section-ref"><i class="fas fa-file-invoice"></i></td>
+                        <td class="section-detail detail-ref">
+                            <div class="execValue exec-supplemental">
+                                <div class="execLabel">Analysis</div>
+                                <div class="links">
+                                    
+                                    
+                                        Learn more about
+                                        <a href="https://nexiality.github.io/documentation/userguide/ImprovingExecutionReport.html">
+                                            Post-Execution Analysis
+                                        </a>
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="execValue execLog">
+                                <div class="execLabel">Logs</div>
+                                <a href="C:\Projects\MySeconedProject\output\20221119_220758\logs\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log" target="_nexial_link">MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log</a><br/><a href="C:\Projects\MySeconedProject\output\20221119_220758\logs\nexial-20221119_220758.log" target="_nexial_link">nexial-20221119_220758.log</a><br/>
+                            </div>
+                            <div class="execValue execArgs">
+                                <div class="execLabel">Runtime Args</div>
+                                <pre>-script C:\Projects\MySeconedProject\artifact\script\MySeconedProject.xlsx</pre>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="chart">
+            <div class="chart-container">
+                <table cellspacing="0" cellpadding="5" border="0" width="100%">
+                <tbody>
+                <tr>
+                    <td width="35%"><canvas id="resultsChart"></canvas></td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="reset-buttons">
+                <span id="chartInstruction">click on the chart above to drill down</span>
+                <button id="resetResultsChart">Execution</button>&nbsp;&nbsp;
+                <button id="rollUpResultsChart">Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="exec-summary">
+
+    
+
+    <div class="exec-summary-header">
+        <table cellspacing="0" cellpadding="5" border="0" width="100%">
+            <tr>
+                <th class="label label-title">Script</th>
+                <th class="label label-title">Data</th>
+                <th class="label label-iteration">Iterations</th>
+                <th class="label label-scenarioPassed">Scenario Passed</th>
+                <th class="label label-datetime exectime">Start Date/Time</th>
+                <th class="label label-time exectime">Duration</th>
+                <th class="label label-num passfail">Total</th>
+                <th class="label label-num passfail">Pass</th>
+                <th class="label label-num passfail">Fail</th>
+                <th class="label label-percent passfail" width="100%">Success %</th>
+            </tr>
+        </table>
+    </div>
+    <div class="planStep canHide" id="planStep1" >
+        <div class="showhide" target="planStep1details">
+            <i class="fas fa-minus-square" onclick="hideSection(this)" title="minimize this section"></i>
+            <i class="fas fa-plus-square" onclick="showSection(this)" title="restore this section"></i>
+        </div>
+
+        <div class="plan-step-summary">
+            <table cellspacing="0" cellpadding="5" border="0">
+                <tr class="hasFailure">
+                    <td class="value value-title" title="Click to download script">
+                        <a class="fileLink" href="C:\Projects\MySeconedProject\artifact\script\MySeconedProject.xlsx">MySeconedProject.xlsx</a>
+                        <i class="fas fa-copy" title="copy script location" onclick="copyToClipboard(&#39;C:\\Projects\\MySeconedProject\\artifact\\script\\MySeconedProject.xlsx&#39;)"></i>
+                    </td>
+                    <td class="value value-title" title="Click to download data">
+                        <a class="fileLink" href="C:\Projects\MySeconedProject\artifact\data\MySeconedProject.data.xlsx">MySeconedProject.data.xlsx</a>
+                        <i class="fas fa-copy" title="copy data file location" onclick="copyToClipboard(&#39;C:\\Projects\\MySeconedProject\\artifact\\data\\MySeconedProject.data.xlsx&#39;)"></i>
+                    </td>
+                    <td class="value value-iteration">1</td>
+                    <td class="value value-scenarioPassed">0 / 1</td>
+                    <td class="value value-datetime exectime">2022/11/19 22:08:02</td>
+                    <td class="value value-time value-tally exectime">00:00:25</td>
+                    <td class="value value-num value-tally passfail">16</td>
+                    <td class="value value-num value-tally passfail">15</td>
+                    <td class="value value-num value-tally passfail">1</td>
+                    <td class="value value-percent value-tally passfail hasFailure">93.75%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="iteration canHide" id="planStep1details">
+            <table cellspacing="0" cellpadding="5" border="0">
+                <tr class="record-header">
+                    <th class="label label-title">Iteration</th>
+                    <th class="label label-title">Scenario</th>
+                    <th class="label label-title">Activity</th>
+                    <th class="label label-scenarioPassed"></th>
+                    <th class="label label-datetime exectime">Start Date/Time</th>
+                    <th class="label label-time exectime">Duration</th>
+                    <th class="label label-num passfail">Total</th>
+                    <th class="label label-num passfail">Pass</th>
+                    <th class="label label-num passfail">Fail</th>
+                    <th class="label label-num passfail">Success %</th>
+                    <th class="label">&nbsp;</th>
+                </tr>
+
+                
+                    <tr class="record iter hasFailure">
+                        <td colspan="3" class="value value-title">
+                            <a class="fileLink" title="Click to download result" target="_nexial_link" id="MySeconedProject.20221119_220802.001.xlsx" href="C:\Projects\MySeconedProject\output\20221119_220758\MySeconedProject.20221119_220802.001.xlsx">Execution Result (1 of 1)</a>
+                            <i class="fas fa-copy" title="copy execution result file location" onclick="copyToClipboard(&#39;C:\\Projects\\MySeconedProject\\output\\20221119_220758\\MySeconedProject.20221119_220802.001.xlsx&#39;)"></i>
+                            <div class="value-scriptRef">
+                                <i class="fas fa-info-circle info" title="Reference Data labeled as nexial.scriptRef.*"></i>
+                                <table cellspacing="0" cellpadding="0">
+                                    
+                                        
+                                    
+                                        
+                                            <tr>
+                                                <td class="label-ref" title="DataSheet(s)">DataSheet(s)</td>
+                                                <td class="value-ref" title="#default">#default</td>
+                                            </tr>
+                                        
+                                    
+                                        
+                                    
+                                </table>
+                            </div>
+                        </td>
+                        <td class="value value-scenarioPassed">0 / 1</td>
+                        <td class="value value-datetime exectime">2022/11/19 22:08:02</td>
+                        <td class="value value-time value-tally exectime">00:00:23</td>
+                        <td class="value value-num value-tally passfail">16</td>
+                        <td class="value value-num value-tally passfail">15</td>
+                        <td class="value value-num value-tally passfail">1</td>
+                        <td class="value value-percent value-tally passfail hasFailure">93.75%</td>
+                    </tr>
+
+                    
+                        <tr class="record scenario hasFailure">
+                            <td class="value spacer2">&nbsp;</td>
+                            <td colspan="3" class="value value-title" title="Scenario">
+                                Scenario
+                                
+                            </td>
+                            <td class="value value-datetime exectime">2022/11/19 22:08:03</td>
+                            <td class="value value-time value-tally exectime">00:00:21</td>
+                            <td class="value value-num value-tally passfail">16</td>
+                            <td class="value value-num value-tally passfail">15</td>
+                            <td class="value value-num value-tally passfail">1</td>
+                            <td class="value value-percent value-tally passfail hasFailure">93.75%</td>
+                        </tr>
+
+                        
+                            <tr class="record activity hasFailure">
+                                <td colspan="2" class="value spacer2"></td>
+                                <td colspan="2" class="value value-title">
+                                    <div class="step-icon-grid">
+                                        <div title="Base Url">Base Url</div>
+                                        <div><i class="fa execution-error-icon" onclick="toggleStepErrors(this)" title="View Errors"></i>&nbsp;</div>
+                                        <div><i class="fa execution-screenshot-icon" onclick="toggleStepFiles(this)" title="View Screenshots/Files"></i></div>
+                                    </div>
+                                    
+                                </td>
+                                <td class="value value-datetime exectime">2022/11/19 22:08:03</td>
+                                <td class="value value-time exectime">00:00:21</td>
+                                <td class="value value-num passfail">16</td>
+                                <td class="value value-num passfail">15</td>
+                                <td class="value value-num passfail">1</td>
+                                <td class="value value-percent passfail hasFailure">93.75%</td>
+                            </tr>
+                            <tr class="record canHide step-detail-row" >
+                                <td class="spacer2"></td>
+                                <td class="spacer2"></td>
+                                <td colspan="8">
+                                    <table cellspacing="0" cellpadding="5" style="width:100%">
+                                        
+                                            <tr class="record step-detail-tr" is-step-error="true">
+                                                <td class="value step-table-col-width-5" style="text-align: right"  rowspan="1">7</td>
+                                                <td class="value step-table-col-width-45" rowspan="1"></td>
+                                                <td class="value step-table-col-width-45 hasFailure">
+                                                    <span title="EXECUTING COMMAND: web.type(locator,value)(&#39;id=Password_Popup&#39;, &#39;JzJftpisC#E5tJB&#39;)
+Specified element disable or not ready: element not interactable   (Session info: chrome=107.0.5304.107)...">EXECUTING COMMAND: web.type(locator,value)('id=Password_Popup', 'JzJftpisC#E5tJB')
+Specified element disable or not ready: element not interactable   (Session info: chrome=107.0.5304.107)...</span>
+                                                </td>
+                                                <td class="value step-table-col-width-5 hasFailure">
+                                                    <a target="_nexial_target" href="C:\Projects\MySeconedProject\output\20221119_220758\captures\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.png">
+                                                        <i class="fas file-image-icon" title="View File"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        
+                                    </table>
+                                </td>
+                            </tr>
+                        
+                    
+                
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="footer">powered by <a href="https://nexiality.github.io">NEXIAL</a></div>
+<br/>
+<br/>
+
+<button id="hideLog" target="" title="click to hide display" onclick="hideLog();">Hide</button>
+
+<div id="loadError" style="display:none;font-weight:bold;font-size:16pt;color:#800;background:rgba(230,200,200,0.9);border:5px solid;padding:25px;margin:auto;position:fixed;width:500px;height:175px;top:0;left:0;right:0;bottom:0;">
+    Unable to load one or more external web resources needed to display this page.<br/><br/>
+    Please check/adjust your Internet access and reload this page again.<br/><br/>
+    Thank you.
+</div>
+
+<script>if (loadErrorFound) { document.getElementById('loadError').style.display = 'block'; }</script>
+<script>
+   const executionChart = new ExecutionChart({"name":"20221119_220758","executionLevel":"EXECUTION","scriptFile":null,"dataFile":null,"testScript":null,"testScriptLink":null,"runHost":"DESKTOP-P8C2QDG","runHostOs":"amd64 Windows 10 10.0","runUser":"Windows 10","triggerUser":"","triggerUrl":"","triggerId":"","startTime":1668874079740,"endTime":1668874108052,"totalLevelPassed":0,"totalSteps":16,"passCount":15,"failCount":1,"warnCount":0,"skippedCount":0,"executed":16,"customHeader":null,"customFooter":null,"failedFast":false,"errorStackTrace":null,"error":null,"executionLog":null,"logs":{"MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log","nexial-20221119_220758.log":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\nexial-20221119_220758.log"},"referenceData":{"Data File":"MySeconedProject.data.xlsx","DataSheet(s)":"#default","runtime args":"-script C:\\Projects\\MySeconedProject\\artifact\\script\\MySeconedProject.xlsx"},"nestedExecutions":[{"name":"MySeconedProject (1)","executionLevel":"SCRIPT","scriptFile":"C:\\Projects\\MySeconedProject\\artifact\\script\\MySeconedProject.xlsx","dataFile":"C:\\Projects\\MySeconedProject\\artifact\\data\\MySeconedProject.data.xlsx","testScript":null,"testScriptLink":null,"runHost":"DESKTOP-P8C2QDG","runHostOs":"amd64 Windows 10 10.0","runUser":"Windows 10","triggerUser":"","triggerUrl":"","triggerId":"","startTime":1668874082422,"endTime":1668874107609,"totalLevelPassed":0,"totalSteps":16,"passCount":15,"failCount":1,"warnCount":0,"skippedCount":0,"executed":16,"customHeader":null,"customFooter":null,"failedFast":false,"errorStackTrace":null,"error":null,"executionLog":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\nexial-20221119_220758.log","logs":{"MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log","nexial-20221119_220758.log":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\nexial-20221119_220758.log"},"referenceData":{},"nestedExecutions":[{"name":"1 of 1","executionLevel":"ITERATION","scriptFile":"C:\\Projects\\MySeconedProject\\artifact\\script\\MySeconedProject.xlsx","dataFile":null,"testScript":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\MySeconedProject.20221119_220802.001.xlsx","testScriptLink":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\MySeconedProject.20221119_220802.001.xlsx","runHost":"DESKTOP-P8C2QDG","runHostOs":"amd64 Windows 10 10.0","runUser":"Windows 10","triggerUser":"","triggerUrl":"","triggerId":"","startTime":1668874082424,"endTime":1668874106051,"totalLevelPassed":0,"totalSteps":16,"passCount":15,"failCount":1,"warnCount":0,"skippedCount":0,"executed":16,"customHeader":null,"customFooter":null,"failedFast":false,"errorStackTrace":null,"error":null,"executionLog":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\nexial-20221119_220758.log","logs":{"MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log","nexial-20221119_220758.log":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\nexial-20221119_220758.log"},"referenceData":{"Data File":"MySeconedProject.data.xlsx","DataSheet(s)":"#default","runtime args":"-script C:\\Projects\\MySeconedProject\\artifact\\script\\MySeconedProject.xlsx"},"nestedExecutions":[{"name":"Scenario","executionLevel":"SCENARIO","scriptFile":null,"dataFile":null,"testScript":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\MySeconedProject.20221119_220802.001.xlsx","testScriptLink":null,"runHost":"DESKTOP-P8C2QDG","runHostOs":"amd64 Windows 10 10.0","runUser":"Windows 10","triggerUser":"","triggerUrl":"","triggerId":"","startTime":1668874083848,"endTime":1668874105549,"totalLevelPassed":0,"totalSteps":16,"passCount":15,"failCount":1,"warnCount":0,"skippedCount":0,"executed":16,"customHeader":null,"customFooter":null,"failedFast":false,"errorStackTrace":null,"error":null,"executionLog":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\nexial-20221119_220758.log","logs":{"MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log","nexial-20221119_220758.log":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\logs\\nexial-20221119_220758.log"},"referenceData":{},"nestedExecutions":[{"name":"Base Url","executionLevel":"ACTIVITY","scriptFile":null,"dataFile":null,"testScript":null,"testScriptLink":null,"runHost":"DESKTOP-P8C2QDG","runHostOs":"amd64 Windows 10 10.0","runUser":"Windows 10","triggerUser":"","triggerUrl":"","triggerId":"","startTime":1668874083849,"endTime":1668874105548,"totalLevelPassed":0,"totalSteps":16,"passCount":15,"failCount":1,"warnCount":0,"skippedCount":0,"executed":16,"customHeader":null,"customFooter":null,"failedFast":false,"errorStackTrace":null,"error":null,"executionLog":null,"logs":{},"referenceData":{},"nestedExecutions":[],"nestMessages":{",web,type(locator,value),[id=Password_Popup, JzJftpisC#E5tJB],<null>,false,[MySeconedProject.20221119_220802.001.xlsx][Scenario][Base Url][STEP   7][web][type(locator,value)]":[]},"planSequence":0,"iterationIndex":0,"iterationTotal":0,"planName":null,"planFile":null,"planDescription":null,"screenRecordings":null,"wsLogs":null,"stepDetails":[{"rowNum":7,"description":"","nestedMessages":[{"message":"EXECUTING COMMAND: web.type(locator,value)('id=Password_Popup', 'JzJftpisC#E5tJB')\nSpecified element disable or not ready: element not interactable   (Session info: chrome=107.0.5304.107)...","file":"C:\\Projects\\MySeconedProject\\output\\20221119_220758\\captures\\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.png","fileType":"image"}],"pass":false}],"stepDetailsHasError":true,"stepDetailsHasLinks":true,"manifest":"nexial-core dev_1490","successRateString":"93.75%","successRate":0.9375,"elapsedTime":21699}],"nestMessages":{},"planSequence":0,"iterationIndex":0,"iterationTotal":0,"planName":null,"planFile":null,"planDescription":null,"screenRecordings":null,"wsLogs":null,"stepDetails":[],"stepDetailsHasError":false,"stepDetailsHasLinks":false,"manifest":"nexial-core dev_1490","successRateString":"93.75%","successRate":0.9375,"elapsedTime":21701}],"nestMessages":{},"planSequence":0,"iterationIndex":1,"iterationTotal":1,"planName":null,"planFile":null,"planDescription":null,"screenRecordings":null,"wsLogs":null,"stepDetails":[],"stepDetailsHasError":false,"stepDetailsHasLinks":false,"manifest":"nexial-core dev_1490","successRateString":"93.75%","successRate":0.9375,"elapsedTime":23627}],"nestMessages":{},"planSequence":0,"iterationIndex":0,"iterationTotal":1,"planName":null,"planFile":null,"planDescription":"Started on 11\/19\/2022 10:07:58 PM from DESKTOP-P8C2QDG via user Windows 10","screenRecordings":null,"wsLogs":null,"stepDetails":[],"stepDetailsHasError":false,"stepDetailsHasLinks":false,"manifest":"nexial-core dev_1490","successRateString":"93.75%","successRate":0.9375,"elapsedTime":25187}],"nestMessages":{},"planSequence":0,"iterationIndex":0,"iterationTotal":0,"planName":null,"planFile":null,"planDescription":null,"screenRecordings":{},"wsLogs":null,"stepDetails":[],"stepDetailsHasError":false,"stepDetailsHasLinks":false,"manifest":"nexial-core dev_1490","successRateString":"93.75%","successRate":0.9375,"elapsedTime":28312});
+   executionChart.initializeChart();
+</script>
+
+
+</body>
+</html>

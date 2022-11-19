@@ -1,0 +1,133 @@
+2022-11-19 22:08:00.077|I|Thread-2|(DELAYED) nexial-core dev_1490 starting up...
+2022-11-19 22:08:00.081|I|Thread-2|(DELAYED) data file resolved as C:\Users\Windows 10\tmp\SAVSS\MySeconedProject.data.xlsx
+2022-11-19 22:08:00.081|I|Thread-2|(DELAYED) input files and output directory resolved...
+2022-11-19 22:08:00.081|I|Thread-2|(DELAYED) cleaning up outdated temp files...
+2022-11-19 22:08:00.081|I|Thread-2|(DELAYED) No predefined nexial-setup found
+2022-11-19 22:08:00.081|I|Thread-2|(DELAYED) re-fetching data from C:\Projects\MySeconedProject\artifact\data\MySeconedProject.data.xlsx
+2022-11-19 22:08:00.089|I|Thread-2|(DELAYED) [20221119_220758] [C:\Projects\MySeconedProject\artifact\script\MySeconedProject.xlsx] resolve RUN ID as 20221119_220758
+2022-11-19 22:08:00.089|I|Thread-2|(DELAYED) [20221119_220758] [C:\Projects\MySeconedProject\artifact\script\MySeconedProject.xlsx] new thread started
+2022-11-19 22:08:00.089|I|Thread-2|No predefined nexial-setup found
+2022-11-19 22:08:00.938|I|Thread-2|outputBase not set; output-to-cloud DISABLED!
+2022-11-19 22:08:00.946|I|Thread-2|accessKey not set; output-to-cloud DISABLED!
+2022-11-19 22:08:00.950|I|Thread-2|secretKey not set; output-to-cloud DISABLED!
+2022-11-19 22:08:01.431|I|Thread-2|missing REQUIRED configuration; sms DISABLED!
+2022-11-19 22:08:02.420|I|Thread-2|On-Demand Inspection detection enabled
+2022-11-19 22:08:02.422|I|Thread-2|[20221119_220758] executing C:\Projects\MySeconedProject\artifact\script\MySeconedProject.xlsx with 1 iteration(s)
+2022-11-19 22:08:02.425|I|Thread-2|[20221119_220758] create directory C:\Projects\MySeconedProject\output\20221119_220758\captures
+2022-11-19 22:08:02.426|I|Thread-2|[20221119_220758] create directory C:\Projects\MySeconedProject\output\20221119_220758\logs
+2022-11-19 22:08:02.760|I|Thread-2|[20221119_220758] merging test data to tmp file C:\Projects\MySeconedProject\output\20221119_220758\MySeconedProject.20221119_220802.001.xlsx
+2022-11-19 22:08:02.761|I|Thread-2|re-fetching data from C:\Projects\MySeconedProject\artifact\data\MySeconedProject.data.xlsx
+2022-11-19 22:08:03.095|I|Thread-2|[20221119_220758] test script and test data merged to C:\Projects\MySeconedProject\output\20221119_220758\MySeconedProject.20221119_220802.001.xlsx
+2022-11-19 22:08:03.788|I|Thread-2|STARTS
+2022-11-19 22:08:03.836|I|Thread-2|MySeconedProject.20221119_220802.001 - executing iteration #1 of 1; Iteration Id 1
+2022-11-19 22:08:03.847|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario - executing test scenario
+2022-11-19 22:08:03.849|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url - executing activity
+2022-11-19 22:08:03.855|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  5|web.open(url)             - executing open(url)(https://www.othoba.com/register)
+2022-11-19 22:08:03.862|I|Thread-2|[chrome] initializing chrome
+2022-11-19 22:08:06.004|I|Thread-2|[chrome] initializing for chrome 107.0.5304.107
+2022-11-19 22:08:06.138|I|Thread-2|[chrome] browser initialization completed for 'chrome'
+2022-11-19 22:08:06.152|I|Thread-2|[chrome] setting browser page load timeout to 15000 ms
+2022-11-19 22:08:06.153|I|Thread-2|[chrome] detected nexial.web.alwaysWait; use fluent-wait (up to 1500 ms) during web automation
+2022-11-19 22:08:09.110|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  5|web.open(url)             - PASS opened URL https://www.othoba.com/register
+2022-11-19 22:08:09.114|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  6|web.type(locator,value)   - executing type(locator,value)(id=PhoneOrEmail_Popup, )
+2022-11-19 22:08:09.889|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  6|web.type(locator,value)   - PASS typed text at 'id=PhoneOrEmail_Popup'
+2022-11-19 22:08:09.894|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  7|web.type(locator,value)   - executing type(locator,value)(id=Password_Popup, JzJftpisC#E5tJB)
+2022-11-19 22:08:12.715|E|Thread-2|Check corresponding error log for details: C:\Projects\MySeconedProject\output\20221119_220758\logs\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log
+2022-11-19 22:08:12.719|E|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  7|web.type(locator,value)   - FAIL EXECUTING COMMAND: web.type(locator,value)('id=Password_Popup', 'JzJftpisC#E5tJB')
+Specified element disable or not ready: element not interactable   (Session info: chrome=107.0.5304.107)...
+2022-11-19 22:08:12.721|E|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  7|web.type(locator,value)   - Error log: C:\Projects\MySeconedProject\output\20221119_220758\logs\MySeconedProject.20221119_220802.001.xlsx_Scenario_A7.log
+2022-11-19 22:08:12.723|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  8|web.type(locator,value)   - executing type(locator,value)(id=Phone, 01577878788)
+2022-11-19 22:08:13.536|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  8|web.type(locator,value)   - PASS typed text at 'id=Phone'
+2022-11-19 22:08:13.543|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  9|web.type(locator,value)   - executing type(locator,value)(id=Email, eeeeeee)
+2022-11-19 22:08:14.387|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|#  9|web.type(locator,value)   - PASS typed text at 'id=Email'
+2022-11-19 22:08:14.392|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 10|web.click(locator)        - executing click(locator)(//label[normalize-space(text())='Male'])
+2022-11-19 22:08:15.091|I|Thread-2|clicking '//label[normalize-space(text())='Male']'...
+2022-11-19 22:08:15.122|I|Thread-2|click target via JS, @id=
+2022-11-19 22:08:15.164|I|Thread-2|clicked -> true
+2022-11-19 22:08:15.183|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 10|web.click(locator)        - PASS click via JS event
+2022-11-19 22:08:15.189|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 11|web.type(locator,value)   - executing type(locator,value)(id=FirstName, )
+2022-11-19 22:08:15.875|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 11|web.type(locator,value)   - PASS typed text at 'id=FirstName'
+2022-11-19 22:08:15.884|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 12|web.type(locator,value)   - executing type(locator,value)(id=Email, eeeeeee@gmail.com)
+2022-11-19 22:08:16.730|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 12|web.type(locator,value)   - PASS typed text at 'id=Email'
+2022-11-19 22:08:16.739|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 13|web.type(locator,value)   - executing type(locator,value)(id=FirstName, 3223)
+2022-11-19 22:08:17.499|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 13|web.type(locator,value)   - PASS typed text at 'id=FirstName'
+2022-11-19 22:08:17.503|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 14|web.type(locator,value)   - executing type(locator,value)(id=LastName, 3333)
+2022-11-19 22:08:18.266|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 14|web.type(locator,value)   - PASS typed text at 'id=LastName'
+2022-11-19 22:08:18.271|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 15|web.click(locator)        - executing click(locator)(css=div#masterContent form)
+2022-11-19 22:08:18.958|I|Thread-2|clicking 'css=div#masterContent form'...
+2022-11-19 22:08:18.993|I|Thread-2|click target via JS, @id=
+2022-11-19 22:08:19.023|I|Thread-2|clicked -> true
+2022-11-19 22:08:19.036|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 15|web.click(locator)        - PASS click via JS event
+2022-11-19 22:08:19.038|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 16|web.select(locator,text)  - executing select(locator,text)(name=DateOfBirthDay, 10)
+2022-11-19 22:08:20.266|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 16|web.select(locator,text)  - PASS selected '10' from 'name=DateOfBirthDay'
+2022-11-19 22:08:20.271|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 17|web.select(locator,text)  - executing select(locator,text)(name=DateOfBirthMonth, February)
+2022-11-19 22:08:21.252|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 17|web.select(locator,text)  - PASS selected 'February' from 'name=DateOfBirthMonth'
+2022-11-19 22:08:21.256|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 18|web.select(locator,text)  - executing select(locator,text)(name=DateOfBirthYear, 1925)
+2022-11-19 22:08:23.618|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 18|web.select(locator,text)  - PASS selected '1925' from 'name=DateOfBirthYear'
+2022-11-19 22:08:23.622|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 19|web.select(locator,text)  - executing select(locator,text)(id=CountryId, Bangladesh)
+2022-11-19 22:08:24.572|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 19|web.select(locator,text)  - PASS selected 'Bangladesh' from 'id=CountryId'
+2022-11-19 22:08:24.575|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 20|web.select(locator,text)  - executing select(locator,text)(id=DivisionId, Dhaka)
+2022-11-19 22:08:25.545|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url|# 20|web.select(locator,text)  - PASS selected 'Dhaka' from 'id=DivisionId'
+2022-11-19 22:08:25.548|I|Thread-2|MySeconedProject.20221119_220802.001|Scenario|Base Url - ending activity
+2022-11-19 22:08:25.925|I|Thread-2|[MySeconedProject.20221119_220802.001|Scenario] saving test scenario
+2022-11-19 22:08:26.051|I|Thread-2|[20221119_220758] 
+/-ITERATION COMPLETE------------------------------------------------------------
+| Test Output:    C:\Projects\MySeconedProject\output\20221119_220758\MySeconedProject.20221119_220802.001.xlsx
+| Iteration:      1
+\-------------------------------------------------------------------------------
+» Execution Time: 22207 ms
+» Test Steps:     16
+» Error(s):       1
+
+
+
+2022-11-19 22:08:27.614|I|Thread-2|[20221119_220758] 
+/-SCRIPT COMPLETE---------------------------------------------------------------
+| Test Script:    C:\Projects\MySeconedProject\artifact\script\MySeconedProject.xlsx
+\-------------------------------------------------------------------------------
+» Execution Time: 27768 ms
+» Iterations:     [1] total 1
+» Test Steps:     16
+» Passed:         15
+» Error(s):       1
+» Iteration 1 of 1: C:\Projects\MySeconedProject\output\20221119_220758\MySeconedProject.20221119_220802.001.xlsx
+
+
+
+2022-11-19 22:08:27.616|I|Thread-2|nexial mailer not enabled: nexial.enableEmail=false
+2022-11-19 22:08:28.051|I|main|[20221119_220758] [C:\Projects\MySeconedProject\artifact\script\MySeconedProject.xlsx] now completed
+2022-11-19 22:08:28.052|I|main|[20221119_220758] all execution thread(s) have terminated
+2022-11-19 22:08:28.053|I|main|[20221119_220758] test run completed in about 29 seconds
+2022-11-19 22:08:28.376|I|main|No predefined nexial-setup found
+2022-11-19 22:08:28.471|I|main|outputBase not set; output-to-cloud DISABLED!
+2022-11-19 22:08:28.473|I|main|accessKey not set; output-to-cloud DISABLED!
+2022-11-19 22:08:28.480|I|main|secretKey not set; output-to-cloud DISABLED!
+2022-11-19 22:08:28.496|I|main|generating HTML output for this execution to C:\Projects\MySeconedProject\output\20221119_220758\execution-output.html
+2022-11-19 22:08:29.958|I|main|generating JUnit XML output for this execution to C:\Projects\MySeconedProject\output\20221119_220758\junit.xml
+2022-11-19 22:08:30.005|I|main|generated the JUnit report for this execution: C:\Projects\MySeconedProject\output\20221119_220758\junit.xml
+2022-11-19 22:08:30.024|I|main|nexial mailer not enabled: nexial.enableEmail=false
+2022-11-19 22:08:30.025|I|main|skipped email notification as configured
+2022-11-19 22:08:30.027|I|main|exiting current script/plan execution
+2022-11-19 22:08:30.027|I|main|exiting Nexial...
+2022-11-19 22:08:30.029|I|main|shutdown starts...
+2022-11-19 22:08:30.030|I|main|[chrome] Shutting down webdriver...
+2022-11-19 22:08:30.033|I|main|[chrome] Close the current window...
+2022-11-19 22:08:46.303|I|main|[chrome] Quit this driver, closing every associated window.
+2022-11-19 22:08:47.879|I|main|shutdown ends...
+2022-11-19 22:08:47.881|I|main|
+
+/-END OF EXECUTION--------------------------------------------------------------
+| » Execution Time: 28 sec.
+| » Test Steps....: 16
+| » Passed........: 15
+| » Failed........: 1
+| » Success Rate..: 93.75%
+\----------------------------------------------------------nexial-core dev_1490-
+
+2022-11-19 22:08:47.883|E|main|failure found; success rate is 93.75%
+2022-11-19 22:08:47.884|I|main|End of Execution:
+NEXIAL_OUTPUT:         C:\Projects\MySeconedProject\output\20221119_220758
+NEXIAL_EXECUTION_HTML: C:\Projects\MySeconedProject\output\20221119_220758\execution-output.html
+NEXIAL_JUNIT_XML:      C:\Projects\MySeconedProject\output\20221119_220758\junit.xml
+NEXIAL_SUCCESS_RATE:   93.75%
+NEXIAL_EXIT_STATUS:    -13
